@@ -3,8 +3,8 @@
 Collection of scripts to generate configurations for various emulators.
 Currently, only xterm; some initial hints for rust(Alacritty).
 
-Much of the configuration performed by these scripts are specialized for custom
-applications and are likely undesirable for most environments.
+Much of this is purely experimental; the configuration performed by these scripts are
+specialized for custom applications and are likely undesirable for most environments.
 
 This is not likely to be useful to others outside of a starting point or inspiration
 for making your own configuration generator.
