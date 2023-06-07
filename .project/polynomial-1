@@ -1,0 +1,10 @@
+http://if.fault.io/factors/meta
+	chapter.txt fault-1 kleptic
+	references.fr lines text
+http://if.fault.io/factors/shell
+	script.sh bourne
+	include.sh bourne
+	context.sh bourne
+http://if.fault.io/factors/python
+	module.py psf-v3
+	interface.pyi psf-v3
