@@ -1,0 +1,2 @@
+! Heading for xterm keyboard translations.
+xterm*translations: #override \n\
