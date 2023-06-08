@@ -1,5 +1,7 @@
 xterm*VT100.translations: #override \n\
+Super Shift ~Alt ~Ctrl <Key>s: dump-html() \n\
 Super ~Shift ~Alt ~Ctrl <Key>v: insert-selection(CLIPBOARD) \n\
+Super ~Shift ~Alt ~Ctrl <Key>c: copy-selection(CLIPBOARD) \n\
 Super Shift ~Alt ~Ctrl <Key>7: send-signal(suspend) \n\
 Super ~Shift ~Alt ~Ctrl <Key>k: send-signal(term) \n\
 Super Shift ~Alt ~Ctrl <Key>k: send-signal(int) \n\
