@@ -1,2 +1,5 @@
-! Heading for xterm keyboard translations.
-xterm*translations: #override \n\
+xterm*VT100.translations: #override \n\
+Super ~Shift ~Alt ~Ctrl <Key>v: insert-selection(CLIPBOARD) \n\
+Super Shift ~Alt ~Ctrl <Key>7: send-signal(suspend) \n\
+Super ~Shift ~Alt ~Ctrl <Key>k: send-signal(term) \n\
+Super Shift ~Alt ~Ctrl <Key>k: send-signal(int) \n\
