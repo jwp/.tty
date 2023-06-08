@@ -23,10 +23,10 @@ def demap(data):
 
 def bind(module, modifiers, mapping):
 	shifts = mapping.pop(('shift',))
-	metas = mapping.pop(('meta',))
+	metas = mapping.pop(('shift', 'meta',))
 
 	return map(module.encode, chain(
-		starmap(module.custom, product([3], metas)),
+		starmap(module.custom, product([(7 ^ (1 << 2))+1], metas)),
 		# Low-ASCII.
 		module.ctlkeys(),
 		starmap(module.insert, product([1], soles)),
