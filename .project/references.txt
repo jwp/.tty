@@ -1,3 +1,21 @@
 ! CONTEXT:
 	/protocol/
 		&<http://if.fault.io/chapters/section.fragments>
+
+[ Input ]
+
+/CSI-u Specification/
+	- (control)`property-set`
+	- &<https://www.leonerd.org.uk/hacks/fixterms/>
+
+	CSI-u isn't strictly followed here.
+
+[ Emulators ]
+
+/xterm/
+	- (control)`property-set`
+	- &<https://invisible-island.net/xterm/>
+
+	/Manual/
+		- (control)`property-set`
+		- &<manpage/xterm.html>
