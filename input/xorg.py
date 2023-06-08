@@ -64,21 +64,13 @@ def xterm_modifiers(mods):
 		modified(mods, 4) + 'Ctrl',
 	])
 
-arrow_map = {
-	'Up': 'A',
-	'Down': 'B',
-	'Right': 'C',
-	'Left': 'D',
-	'Home': 'H',
-	'End': 'F',
-}
-
-def arrow(modifiers, key):
+def arrow(modifiers, pair):
+	key, code = pair
 	if modifiers > 1:
-		stroke = f'string("[1;{modifiers}{arrow_map[key]}")'
+		stroke = f'string("[1;{modifiers}{code}")'
 	else:
 		# For arrows, applications may not recognize/ignore modifiers.
-		stroke = f'string("[{arrow_map[key]}")'
+		stroke = f'string("[{code}")'
 	mods = xterm_modifiers(modifiers-1)
 	return mods + ' <Key>' + key + ': string(0x1b) ' + stroke
 

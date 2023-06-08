@@ -5,7 +5,7 @@ from itertools import starmap
 from itertools import product
 from itertools import chain
 
-soles = [
+exceptions = [
 	0x7f, # "delete"
 	0x1b, # escape
 	0x08, # backspace
@@ -13,6 +13,15 @@ soles = [
 	0x0d, # return
 	0x20, # space
 ]
+
+navigation = {
+	'Up': 'A',
+	'Down': 'B',
+	'Right': 'C',
+	'Left': 'D',
+	'Home': 'H',
+	'End': 'F',
+}
 
 def demap(data):
 	import collections
@@ -29,8 +38,8 @@ def bind(module, modifiers, mapping):
 		starmap(module.custom, product([(7 ^ (1 << 2))+1], metas)),
 		# Low-ASCII.
 		module.ctlkeys(),
-		starmap(module.insert, product([1], soles)),
-		starmap(module.csi_u, product(modifiers, soles)),
+		starmap(module.insert, product([1], exceptions)),
+		starmap(module.csi_u, product(modifiers, exceptions)),
 
 		# Alphabet and usual symbols.
 		starmap(module.insert, product([1], (ord(k[0]) for k in shifts))),
@@ -41,6 +50,8 @@ def bind(module, modifiers, mapping):
 			(2, "Insert"),
 			(5, "Prior"),
 			(6, "Next"),
+
+			# Does not appear to be the preferred mapping on macOS.
 			#(7, "Home"),
 			#(8, "End"),
 		])),
@@ -57,11 +68,7 @@ def bind(module, modifiers, mapping):
 		])),
 
 		# Traditional CSI arrows, home, and end.
-		starmap(module.arrow, product(modifiers, [
-			'Up', 'Right', 'Down', 'Left',
-			'Home',
-			'End',
-		])),
+		starmap(module.arrow, product(modifiers, navigation.items())),
 	))
 
 import xorg
