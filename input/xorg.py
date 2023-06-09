@@ -103,14 +103,11 @@ def custom(modifiers, rekey):
 	mods = xterm_modifiers(modifiers-1)
 	return mods + ' <Key>' + kid(ki) + ': ' + stroke
 
-def ctlkeys(limit=ord(' '), ctloffset=ord('A')-1):
-	for i in range(limit):
-		ctlchar = chr(ctloffset + i).lower()
-		if ctlchar in _key_identifiers:
-			k = _key_identifiers[ctlchar]
-		else:
-			k = ctlchar
-		yield (f'~Shift ~Alt Ctrl <Key>{k}: string({hex(i)})')
+def control(modifiers, pair):
+	ctlid, ctlord = pair
+	stroke = f'string({hex(ctlord)})'
+	mods = xterm_modifiers(modifiers-1)
+	return mods + ' <Key>' + kid(ctlid) + ': ' + stroke
 
 def encode(line):
 	return line + ' \\n\\\n'
