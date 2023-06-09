@@ -1,0 +1,27 @@
+{
+	"λ": ["shift", "meta", "l"],
+	"π": ["shift", "meta", "p"],
+	"α": ["shift", "meta", "a"],
+	"β": ["shift", "meta", "b"],
+	"φ": ["shift", "meta", "v"],
+	"χ": ["shift", "meta", "x"],
+	"ρ": ["shift", "meta", "r"],
+	"ε": ["shift", "meta", "e"],
+	"ω": ["shift", "meta", "w"],
+	"ζ": ["shift", "meta", "z"],
+	"ξ": ["shift", "meta", "c"],
+	"ψ": ["shift", "meta", "y"],
+	"γ": ["shift", "meta", "g"],
+	"ι": ["shift", "meta", "i"],
+	"τ": ["shift", "meta", "t"],
+	"μ": ["shift", "meta", "m"],
+	"η": ["shift", "meta", "h"],
+	"δ": ["shift", "meta", "d"],
+	"κ": ["shift", "meta", "k"],
+	"θ": ["shift", "meta", "h"],
+
+	"Ω": ["shift", "meta", "o"],
+	"Δ": ["shift", "meta", "v"],
+
+	"": "EOF"
+}

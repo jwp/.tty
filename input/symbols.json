@@ -1,0 +1,64 @@
+{
+	"": "Shift-* is used exclusively for selecting character variants",
+	"": "Configuration avoids using modifiers without shift in order to allow",
+	"": "shorter combinations to be represented with CSI-u",
+
+	"": "Associated with `exclamation` as it is commonly used to represent `not`",
+	"!": ["shift", "1"],
+	"¬": ["shift", "meta", "1"],
+
+	"": "Associated for glyph similarity; english alphabet being casually reserved for greek",
+	"@": ["shift", "2"],
+	"∀": ["shift", "meta", "2"],
+
+	"$": ["shift", "4"],
+	"£": ["shift", "meta", "4"],
+	"%": ["shift", "5"],
+	"∞": ["shift", "meta", "5"],
+
+	"^": ["shift", "6"],
+	"v": ["shift", "meta", "6"],
+
+	"&": ["shift", "7"],
+	"~": ["shift", "`"],
+	"∿": ["shift", "meta", "`"],
+
+	"(": ["shift", "9"],
+	")": ["shift", "0"],
+
+	"_": ["shift", "-"],
+	"±": ["shift", "meta", "-"],
+	"+": ["shift", "="],
+	"≡": ["shift", "meta", "="],
+
+	"𝑓": ["shift", "meta", "f"], "": "function",
+	"{": ["shift", "["],
+	"}": ["shift", "]"],
+	"｢": ["shift", "meta", "["],
+	"｣": ["shift", "meta", "]"],
+
+	"|": ["shift", "\u005c"],
+	":": ["shift", ";"],
+	"\u0022": ["shift", "'"],
+	"¿": ["shift", "meta", "q"],
+
+	"#": ["shift", "3"],
+	"√": ["shift", "meta", "3"],
+	"÷": ["shift", "meta", "/"],
+	"×": ["shift", "meta", "8"],
+	"*": ["shift", "8"],
+	"?": ["shift", "/"],
+
+	"<": ["shift", ","],
+	">": ["shift", "."],
+	"≤": ["shift", "meta", ","],
+	"≥": ["shift", "meta", "."],
+
+	"": "Regular arrows",
+	"←": ["shift", "meta", "Left"],
+	"↑": ["shift", "meta", "Up"],
+	"→": ["shift", "meta", "Right"],
+	"↓": ["shift", "meta", "Down"],
+
+	"": "EOF"
+}
