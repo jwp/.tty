@@ -26,7 +26,7 @@ Currently, nothing implemented here.
 
 Session daemon configuration. tmux, screen, and mirrors.
 
-- Signal relay shell.
+- Signal relay shell launcher.
 - tmux configuration.
 
 ### Usage
@@ -37,8 +37,6 @@ Some legacy bindings (shift-tab, control-space, and others) are discarded in fav
 variants for better or worse.
 
 ```shell
-# Currently, scripts must be ran directly and generated configurations connected by hand.
-
-# Eventually, this will be:
-~/.tty/configure xterm
+# Currently, only generates xterm translations.
+~/.tty/configure keyboard && ~/.tty/configure xterm
 ```

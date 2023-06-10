@@ -1,1 +1,25 @@
 #!/bin/sh
+CONTEXT="$(cd "$(dirname "$0")" && pwd)"
+cd "$CONTEXT" || exit
+TARGET="$1"
+shift 1
+
+x ()
+{
+	echo >&2 '[' "$@" ']'
+	"$@"
+}
+
+case "$TARGET" in
+	xterm)
+		x python3 input/keys.py keyboard.json | cat input/translations.xr - >xterm-keyboard.xr
+		echo '! Add to .Xresources'
+		echo '#include ".tty/xterm-keyboard.xr"'
+	;;
+	keyboard)
+		x python3 input/english.py input/greek.json input/symbols.json >keyboard.json
+	;;
+	*)
+		echo >&2 "ERROR: unknown configuration target, '$TARGET'"
+	;;
+esac
