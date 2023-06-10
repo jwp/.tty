@@ -16,6 +16,18 @@
 	- (control)`property-set`
 	- &<https://invisible-island.net/xterm/>
 
+	The primary configuration target.
+
 	/Manual/
 		- (control)`property-set`
 		- &<manpage/xterm.html>
+
+/alacritty/
+	- (control)`property-set`
+	- &<https://alacritty.org/>
+
+	Cross platform, GPU accelerated terminal.
+
+	/Sequence Support/
+		- (control)`property-set`
+		- &<https://github.com/alacritty/blob/master/docs/escape_support.md>
